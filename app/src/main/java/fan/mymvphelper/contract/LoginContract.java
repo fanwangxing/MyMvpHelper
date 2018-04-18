@@ -10,9 +10,11 @@ import fan.mymvphelper.base.BaseView;
 
 public interface LoginContract {
     interface Model extends BaseModel {
+        boolean login(String username,String password);
     }
 
     interface View extends BaseView{
+        void loginSuccess();
     }
 
    abstract class Presenter extends BasePresenter<Model,View>{

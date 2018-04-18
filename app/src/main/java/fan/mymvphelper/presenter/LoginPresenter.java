@@ -9,6 +9,9 @@ import fan.mymvphelper.contract.LoginContract;
 public class LoginPresenter extends LoginContract.Presenter {
     @Override
     public void login(String name, String password) {
+        if(mModel.login(name,password)){
+            mView.loginSuccess();
+        }
 
     }
 }
